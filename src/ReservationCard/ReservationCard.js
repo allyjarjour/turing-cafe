@@ -7,10 +7,10 @@ export default class ReservationCard extends Component {
     const { name, date, time, number } = this.props
     return (
       <div className="reservation-card" data-testid="reservation-card" >
-        <p>{name}</p>
-        <p>{date}</p>
-        <p>{time}</p>
-        <p>{number}</p>
+        <p><span>Name: </span>{name}</p>
+        <p><span>Date: </span>{date}</p>
+        <p><span>Time: </span>{time}</p>
+        <p><span>Number: </span>{number}</p>
       </div>
     )
   }

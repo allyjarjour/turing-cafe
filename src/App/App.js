@@ -15,7 +15,6 @@ class App extends Component {
 
   componentDidMount = async () => {
     let reservationsData = await getReservations()
-    console.log(reservationsData)
     this.setState({
       reservations: reservationsData
     })
@@ -24,7 +23,24 @@ class App extends Component {
   makeReservation = (reservation) => {
     this.setState({
       reservations: [...this.state.reservations, reservation]
-    })
+    })    
+    // const reservationToAdd = {
+      /// would verify data types here and add key value pairs but ran out of time
+    // }
+    // fetch("http://localhost:3001/api/v1/reservations", {
+    //   method: "POST", // or 'PUT'
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(reservationToAdd),
+    // })
+    //   .then((response) => response.json())
+    //   .then((data) => {
+    //     console.log("Success:", data);
+    //   })
+    //   .catch((error) => {
+    //     console.error("Error:", error);
+    //   });
   }
   
   render() {
