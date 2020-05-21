@@ -5,11 +5,11 @@ export default class ReservationForm extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      id: null,
-      name: null,
-      date: null,
-      time: null,
-      number: null
+      id: '',
+      name: '',
+      date: '',
+      time: '',
+      number: ''
     }
   }
 
@@ -26,11 +26,9 @@ export default class ReservationForm extends Component {
     await this.setState({
       id: Date.now()
     })
-    // const { name, date, time, number, id } = this.state;
     const reservation = { ...this.state }
     console.log(reservation);
-    
-      this.props.makeReservation(reservation);
+    this.props.makeReservation(reservation);
   }
 
   render() {
